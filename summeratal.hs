@@ -5,15 +5,21 @@ import Data.List (splitAt)
     -- UNREADABLE AND UGLY AND HARD TO MAINTAIN. 
     -- HAVING PROBLEM WITH THE HASKELL SYNTAX,
     -- ILL  TRY TO REFACTOR IT LATER WITH PROPER SYNTAX.
-    -- AND SO  TAKE IN A 2 STRINGS AS INPUT.
+    -- string conversion to int needed
 --sumThehighNumbers :: [Int] -> int
     --sum(drop (div (length ints) 2)  (sort( ints)))
-
+--convertToInt:: string -> int
+--convertToInt s = s :: Int
 main :: IO ()
 main = do
+    print "Welcome keep Kattis happy later, no typing nececary (redundant input from kattis)"
+    lineKattis <- getLine
+    print "Enter input in format 5 2 3 2 1 1 etc (conversion to list not handled yet)"
+    line <- getLine
+    print (words line ++ "string to int conversion through maps planned feature")
                                                                                                                
     let ints = [5,3,2,1,1] 
-        in putStrLn $ "sum of top " ++ show (length ints - (div (length ints) 2)) ++ "ints:" ++
+        in putStrLn $ show ints ++ "The sum of top " ++ show (length ints - (div (length ints) 2)) ++ " ints: " ++
         show (sum(drop (div (length ints) 2)  (sort( ints))))
 
     {--putStrLn $ "Ints: " ++ show (ints)
