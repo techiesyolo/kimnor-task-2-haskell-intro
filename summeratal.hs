@@ -17,7 +17,7 @@ main = do
     print "Enter input in format 5 2 3 2 1 1 etc (conversion to list not handled yet)"
     line <- getLine
     print (words line ++ "string to int conversion through maps planned feature")
-                                                                                                               
+       -- planned function here, map convert string to int on 'word line' out put to ints                                                                                     
     let ints = [5,3,2,1,1] 
         in putStrLn $ show ints ++ "The sum of top " ++ show (length ints - (div (length ints) 2)) ++ " ints: " ++
         show (sum(drop (div (length ints) 2)  (sort( ints))))
