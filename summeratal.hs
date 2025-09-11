@@ -1,29 +1,30 @@
 import Data.List (sort)
 import Data.List (splitAt)
     -- UNFORTUNATLY I DIDNT GET THE CODE TO WORK 100%
-    -- IT'S DOES CALCULATE THE SUM OFTOP NUMBERS BUT IT IS
-    -- UNREADABLE AND UGLY AND HARD TO MAINTAIN. 
-    -- HAVING PROBLEM WITH THE HASKELL SYNTAX,
+    -- IT'S DOES CALCULATE THE SUM OF TOP NUMBERS BUT IT IS
+    -- UNREADABLE AND UGLY AND HARD TO MAINTAIN code. 
     -- ILL  TRY TO REFACTOR IT LATER WITH PROPER SYNTAX.
     -- string conversion to int needed
+
 --sumThehighNumbers :: [Int] -> int
     --sum(drop (div (length ints) 2)  (sort( ints)))
 --convertToInt:: string -> int
 --convertToInt s = s :: Int
 main :: IO ()
 main = do
-    print "Welcome keep Kattis happy later, no typing nececary (redundant input from kattis)"
-    lineKattis <- getLine
+    print "Welcome! press enter to  keep Kattis happy, no typing nececary (redundant input from kattis)"
+    _ <- getLine
     print "Enter input in format 5 2 3 2 1 1 etc (conversion to list not handled yet)"
     line <- getLine
-    print (words line ++ "string to int conversion through maps planned feature")
+    print (words line)
+    print "string to int conversion through maps planned feature"
        -- planned function here, map convert string to int on 'word line' out put to ints                                                                                     
     let ints = [5,3,2,1,1] 
         in putStrLn $ show ints ++ "The sum of top " ++ show (length ints - (div (length ints) 2)) ++ " ints: " ++
         show (sum(drop (div (length ints) 2)  (sort( ints))))
 
     {--putStrLn $ "Ints: " ++ show (ints)
-    --putStrLn input
+    --putStrLn input-
     
     --putStrLn input2
     {--let wordList = words "1 14 67 83 42 6 17 33 91"
@@ -49,8 +50,8 @@ main = do
     putStrLn $ "Sortlenght: " ++ show (length $ sort ints)
     --putStrLn $ "drop s lenght div+mod from sorted ints: " ++ show(drop (div (length ints) 2) (sort( ints)))
     putStrLn $ "take lenght div+mod from sorted ints: " ++ show(drop (div (length ints) 2 + mod (length ints) 2) (sort( ints)))
-    --}
+    --
     
         --putStrLn $ show(myString)
 
-    --- let complicated x=2 , y=5 in 
+    --- let complicated x=2 , y=5 in --}
